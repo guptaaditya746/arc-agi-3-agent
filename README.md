@@ -4,10 +4,10 @@ Workspace for participating in the [ARC Prize 2026 ARC-AGI-3 Kaggle competition]
 
 ## Current status — 2026-10-25
 
-- Kaggle account is entered in the competition.
-- Baseline submission **57631315** completed with public score **0.15**.
+- Kaggle account is entered in the [competition](https://www.kaggle.com/competitions/arc-prize-2026-arc-agi-3).
+- [Baseline notebook](https://www.kaggle.com/code/adi4r86/arc-agi-3-exploration-baseline) produced submission **57631315**, which completed with public score **0.15**.
 - The baseline policy cycles through simple controls and click points. It is useful as a working reference but does not reason over observations.
-- A separate Gemma 4 31B candidate is based on MB Boktiar Mahbub Murad's public Apache-2.0 notebook, which reported **0.86** on the public leaderboard. That is a prior result, not a guaranteed score for this account.
+- A separate [Gemma 4 31B candidate](https://www.kaggle.com/code/adi4r86/arc-agi-3-gemma-31b-agent) is based on MB Boktiar Mahbub Murad's public Apache-2.0 notebook, which reported **0.86** on the public leaderboard. That is a prior result, not a guaranteed score for this account.
 - Candidate v2 is still marked running on Kaggle. Candidate v3 has been saved without running and disables the duplicate model startup smoke on preview runs. No new competition submission has been made.
 
 See [progress](docs/progress.md), [blockers](docs/blockers.md), [next steps](docs/next-steps.md), and the [research summary](docs/research-strategy.md).
