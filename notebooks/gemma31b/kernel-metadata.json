@@ -1,0 +1,26 @@
+{
+  "id": "adi4r86/arc-agi-3-gemma-31b-agent",
+  "title": "ARC AGI 3 Gemma 31B Agent",
+  "code_file": "gemma_agent.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "kernel_sources": [
+    "philipvonderlind/vllm-deps",
+    "mbmmurad/vllm-0-23-0-tf5-wheelhouse"
+  ],
+  "competition_sources": [
+    "arc-prize-2026-arc-agi-3"
+  ],
+  "model_sources": [
+    "google/gemma-4/Transformers/gemma-4-31b-it/1"
+  ],
+  "machine_shape": "NvidiaRtxPro6000",
+  "keywords": [
+    "gpu"
+  ],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:57e612b484cf3df5026ee4dcc3cb176974b22b2bc0937fb1e16132a8be4cb13c"
+}
