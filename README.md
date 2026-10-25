@@ -8,7 +8,7 @@ Workspace for participating in the [ARC Prize 2026 ARC-AGI-3 Kaggle competition]
 - [Baseline notebook](https://www.kaggle.com/code/adi4r86/arc-agi-3-exploration-baseline) produced submission **57631315**, which completed with public score **0.15**.
 - The baseline policy cycles through simple controls and click points. It is useful as a working reference but does not reason over observations.
 - A separate [Gemma 4 31B candidate](https://www.kaggle.com/code/adi4r86/arc-agi-3-gemma-31b-agent) is based on MB Boktiar Mahbub Murad's public Apache-2.0 notebook, which reported **0.86** on the public leaderboard. That is a prior result, not a guaranteed score for this account.
-- Candidate v2 is still marked running on Kaggle. Candidate v3 has been saved without running and disables the duplicate model startup smoke on preview runs. No new competition submission has been made.
+- Candidate v2 failed because Kaggle could not mount its vLLM wheelhouse notebook source. Candidate metadata now uses the direct public wheelhouse dataset and retains the Python 3.12 image pin. Candidate v3 is saved without running and disables the duplicate model startup smoke on preview runs; the next retry will create a new version. No new competition submission has been made.
 
 See [progress](docs/progress.md), [blockers](docs/blockers.md), [next steps](docs/next-steps.md), and the [research summary](docs/research-strategy.md).
 

@@ -9,11 +9,12 @@
 5. Researched public solutions. The highest-upside available candidate found was a public Gemma 4 31B vision agent notebook reporting 0.86.
 6. Created an attributed candidate using its Apache-2.0-licensed code and attached the public Gemma model and offline vLLM wheelhouse.
 7. Candidate v1 failed because the default Kaggle Python 3.13 image could not use the CPython 3.12 vLLM wheel. Pinned the same Python 3.12 Kaggle image used by the source notebook.
-8. Candidate v2 is still reported as running. Candidate v3 was saved without a run and skips a duplicate model-startup smoke in preview mode; the actual competition rerun still starts the model in the agent.
-9. A further GPU run was rejected because Kaggle reported its maximum batch GPU session count of 2 was reached. No new competition submission has been made.
+8. Candidate v2 failed before execution because Kaggle could not mount the vLLM wheelhouse notebook source. Candidate metadata now attaches the public `ko0kip/vllm-0230-offline` dataset, which the notebook already recognizes as a wheelhouse path.
+9. Candidate v3 is saved without running; it disables duplicate model startup smoke in preview mode. A new run should verify the direct wheelhouse dataset attachment.
+10. No new competition submission has been made.
 
 ## Current competition state
 
 - Best score for this account: **0.15** (submission 57631315).
-- Stronger candidate: Gemma 4 31B, awaiting a successful Kaggle run.
+- Stronger Gemma candidate: awaiting a successful Kaggle run after the wheelhouse input change.
 - Daily competition submission quota was exhausted after submission 57631315; wait for Kaggle's reset before submitting another version.

@@ -2,8 +2,8 @@
 
 ## Highest priority
 
-1. Check `adi4r86/arc-agi-3-gemma-31b-agent` version 2. If it completes, inspect its logs and confirm the vLLM image-generation smoke passed.
-2. When a GPU session is available, run candidate v3. It skips the duplicate preview startup smoke but keeps local vLLM startup in the competition execution path. Confirm the preview run produces `submission.parquet`.
+1. Push the Gemma candidate with `ko0kip/vllm-0230-offline` attached directly as a dataset source. Confirm the input mounts and the pinned Python 3.12 environment installs vLLM.
+2. Once a GPU session is available, run the preview version. It should skip duplicate model startup and still emit `submission.parquet`.
 3. After Kaggle's daily competition limit resets, submit the validated GPU notebook version. Record the submission reference, status, public score, and runtime here.
 
 ## Improve from measured results

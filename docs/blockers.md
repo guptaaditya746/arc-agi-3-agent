@@ -3,13 +3,15 @@
 ## Kaggle runtime / vLLM
 
 - The public vLLM 0.23 wheelhouse contains CPython 3.12 wheels. The default Kaggle image used Python 3.13 and failed dependency resolution.
-- Candidate v2 uses the same pinned Python 3.12 image as the public 0.86 source notebook, but its setup run remains `RUNNING`.
-- Kaggle rejected another RTX run with `Maximum batch GPU session count of 2 reached`. Wait for a GPU slot and retry candidate v3, whose preview path avoids a separate model startup.
-- The notebook preview is not the competition evaluation. The competition rerun must start the local model, connect to `gateway:8001`, act on the hidden games, and produce the gateway's real score artifact.
+- Candidate v2 used the correct pinned Python 3.12 image but failed before execution: Kaggle could not mount the wheelhouse notebook source (`mbmmurad/vllm-0-23-0-tf5-wheelhouse`).
+- Candidate metadata now uses the direct public dataset `ko0kip/vllm-0230-offline`, which the source notebook already searches as a wheelhouse path. Retry and confirm the source mounts.
+- Candidate v3 skips duplicate model startup smoke on preview runs; actual competition reruns still launch vLLM through the agent.
+- Kaggle previously rejected an additional RTX run because its batch GPU session limit was reached. Retry after a GPU slot is available.
+- The competition rerun must start the local model, connect to `gateway:8001`, act on hidden games, and produce the gateway's real score artifact.
 
 ## Evaluation limits
 
-- Only one competition submission remained available per day after the 0.15 baseline; the CLI then reported zero remaining. Avoid spending a new submission until the Gemma candidate has at least passed setup and preview validation.
+- Only one competition submission remained available per day after the 0.15 baseline; the CLI then reported zero remaining. Avoid spending a new submission until the Gemma candidate has passed setup and preview validation.
 - ARC-AGI-3 uses internet-disabled evaluation and has a nine-hour runtime cap. Hosted model APIs are out; the candidate uses an attached local model.
 - The reported 0.86 belongs to another account's prior public run. It may not reproduce because versions, runtime images, and hidden games can differ.
 
